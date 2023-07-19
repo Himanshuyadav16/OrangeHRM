@@ -41,7 +41,7 @@ public class AdminPage extends BasePage{
         employeeName.sendKeys("Virat Kohli");
         Status.click();
         disable.click();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         resetButton.click();
 
     }
