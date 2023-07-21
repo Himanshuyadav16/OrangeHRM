@@ -12,7 +12,7 @@ public class AdminPage extends BasePage{
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
     private WebElement userRole;
 
-    @FindBy(xpath =" //*[contains(text(),'Admin')]")
+    @FindBy(xpath ="//*[contains(text(),'Admin')]")
     private WebElement selectAdmin;
 
     @FindBy(css = "input[placeholder='Type for hints...']")

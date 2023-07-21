@@ -4,6 +4,7 @@ import com.example.BaseClass;
 import com.example.pages.AdminPage;
 import com.example.pages.HomePage;
 import com.example.pages.LoginPage;
+import com.example.pages.PimPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -46,6 +47,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.pim();
+        PimPage pimPage=new PimPage(driver);
+        pimPage.employeeInformation();
         //driver.close();
     }
 

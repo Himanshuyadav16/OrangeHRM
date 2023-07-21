@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LoginPage extends BasePage {
     public String baseUrl = ApplicationProperties.INSTANCE.getUrl();
@@ -27,7 +28,11 @@ public class LoginPage extends BasePage {
         driver.get(baseUrl);
         Thread.sleep(3000);
         loginUserName.sendKeys(userName);
+        Assert.assertEquals(true, loginUserName.isDisplayed());
+        Assert.assertEquals("Admin", userName);
         loginPassword.sendKeys(password);
+        Assert.assertEquals("admin123", password);
+        Assert.assertEquals(true, loginPassword.isDisplayed());
         loginButton.click();
     }
 
