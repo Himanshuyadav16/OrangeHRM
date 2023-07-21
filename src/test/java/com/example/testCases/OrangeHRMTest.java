@@ -1,10 +1,7 @@
 package com.example.testCases;
 
 import com.example.BaseClass;
-import com.example.pages.AdminPage;
-import com.example.pages.HomePage;
-import com.example.pages.LoginPage;
-import com.example.pages.PimPage;
+import com.example.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -59,6 +56,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.leave();
+        LeavePage leavePage =new LeavePage(driver);
+        leavePage.leaveList();
         //driver.close();
     }
 
@@ -69,6 +68,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.time();
+        TimePage timePage=new TimePage(driver);
+        timePage.timeSheet();
         //driver.close();
     }
 
@@ -79,6 +80,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.recruitment();
+        RecruitmentPage recruitmentPage=new RecruitmentPage(driver);
+        recruitmentPage.candidates();
         //driver.close();
     }
 
