@@ -92,6 +92,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.myInfo();
+        MyInfoPage myInfoPage=new MyInfoPage(driver);
+        myInfoPage.personalDetails();
         //driver.close();
     }
 
@@ -102,6 +104,7 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.performance();
+
         //driver.close();
     }
 
@@ -112,6 +115,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.directory();
+        DirectoryPage directoryPage=new DirectoryPage(driver);
+        directoryPage.directory();
         //driver.close();
     }
 
@@ -122,6 +127,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.maintenance();
+        MaintenancePage maintenancePage=new MaintenancePage(driver);
+        maintenancePage.administrator();
         //driver.close();
     }
 
@@ -132,6 +139,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.claim();
+        ClaimPage claimPage=new ClaimPage(driver);
+        claimPage.employeeClaims();
         //driver.close();
     }
 
@@ -142,6 +151,8 @@ public class OrangeHRMTest extends BaseClass {
         loginPage.login();
         HomePage homePage = new HomePage(driver);
         homePage.buzz();
+        BuzzPage buzzPage =new BuzzPage(driver);
+        buzzPage.buzzNewsfeed();
         //driver.close();
     }
 }
